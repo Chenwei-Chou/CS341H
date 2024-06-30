@@ -1,0 +1,9 @@
+#!/bin/bash
+
+while true; do
+  # Check if the server is already running
+  if ! pgrep -x "server" > /dev/null; then
+    $HOME/server &
+  fi
+  sleep 3
+done

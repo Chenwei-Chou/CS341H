@@ -1,0 +1,9 @@
+#!/bin/bash
+
+while true; do
+  # Check if the client is already running
+  if ! pgrep -x "client" > /dev/null; then
+	  $HOME/client node0 &
+  fi
+  sleep 3
+done
